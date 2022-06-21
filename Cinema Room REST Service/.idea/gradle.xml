@@ -17,6 +17,11 @@
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Reading integer numbers" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/The sum of digits" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Check if an array is sorted ascending" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Does an array contain N" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select loops" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
             <option value="$PROJECT_DIR$/Topics/Primitive and reference types/Creating a reference type" />
             <option value="$PROJECT_DIR$/Topics/Primitive and reference types/The assignment" />
             <option value="$PROJECT_DIR$/Topics/Primitive and reference types/Theory" />
@@ -34,6 +39,7 @@
             <option value="$PROJECT_DIR$/Topics/The for-loop/Determine the result" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/Numbers divisible by six" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/Statements" />
+            <option value="$PROJECT_DIR$/Topics/The for-loop/The sum of integers from a to b" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/Theory" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Collatz conjecture" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Magic code" />

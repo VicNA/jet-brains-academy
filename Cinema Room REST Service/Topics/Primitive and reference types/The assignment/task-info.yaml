@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: The variables a and b store the same value 100.
-- text: The variables c and d store the same value "abc".
-- text: The variables a and b have reference to the same value 100.
-- text: The variables c and d have reference to the same value "abc".
+is_multiple_choice: false
 files:
 - name: src/Task.java
   visible: true
