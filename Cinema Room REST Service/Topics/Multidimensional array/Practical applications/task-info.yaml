@@ -1,5 +1,10 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+- text: Creating tables
+- text: Position of an object in 3D space
+- text: 2D map on which objects are positioned with coordinates
+- text: Creating matrices
 files:
 - name: src/Task.java
   visible: true
@@ -12,6 +17,6 @@ files:
       }
     }
   learner_created: false
-feedback_link: https://hyperskill.org/learn/step/3280#comment
+feedback_link: https://hyperskill.org/learn/step/12438#comment
 status: Solved
 record: -1
