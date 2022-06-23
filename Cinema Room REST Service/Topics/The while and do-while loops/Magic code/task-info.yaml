@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+- text: It counts the number of '0' in the number n.
+- text: It counts the number of digits of the number n.
+- text: It finds the greatest digit of the number n.
+- text: It determines whether the number n is divisible by 10.
+- text: It rearranges digits of the number n.
 files:
 - name: src/Task.java
   visible: true
