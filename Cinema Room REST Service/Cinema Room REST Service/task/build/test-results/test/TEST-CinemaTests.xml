@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CinemaTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-02T17:32:28" hostname="HOMEDESK" time="11.724">
+<testsuite name="CinemaTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-07T08:59:30" hostname="TAX-2015-024" time="6.053">
   <properties/>
-  <testcase name="start" classname="CinemaTests" time="11.724"/>
+  <testcase name="start" classname="CinemaTests" time="6.053"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,21 +13,27 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2022-07-02 20:32:30.068  INFO 11616 --- [    Test worker] cinema.Main                              : Starting Main using Java 17.0.3 on HomeDesk with PID 11616 (started by vicdim in O:\IntelliJ-IDEA\Java\JetBrains-Academy\Cinema Room REST Service\Cinema Room REST Service\task)
-2022-07-02 20:32:30.074  INFO 11616 --- [    Test worker] cinema.Main                              : No active profile set, falling back to default profiles: default
-2022-07-02 20:32:33.821  INFO 11616 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-07-02 20:32:33.846  INFO 11616 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-02 20:32:33.847  INFO 11616 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-07-02 20:32:34.043  INFO 11616 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-02 20:32:34.043  INFO 11616 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3725 ms
-2022-07-02 20:32:37.481  INFO 11616 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-07-02 20:32:37.631  INFO 11616 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-2022-07-02 20:32:37.736  INFO 11616 --- [    Test worker] cinema.Main                              : Started Main in 8.639 seconds (JVM running for 10.825)
-2022-07-02 20:32:39.814  INFO 11616 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-02 20:32:39.815  INFO 11616 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-02 20:32:39.820  INFO 11616 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-07 11:59:31.605  INFO 2660 --- [    Test worker] cinema.Main                              : Starting Main using Java 17.0.3 on TAX-2015-024 with PID 2660 (started by viktor-n in D:\Programming\IntelliJ-IDEA\Java\JetBrains-Academy\Cinema Room REST Service\Cinema Room REST Service\task)
+2022-07-07 11:59:31.610  INFO 2660 --- [    Test worker] cinema.Main                              : No active profile set, falling back to default profiles: default
+2022-07-07 11:59:34.094  INFO 2660 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2022-07-07 11:59:34.116  INFO 2660 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 11:59:34.117  INFO 2660 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-07-07 11:59:34.287  INFO 2660 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 11:59:34.288  INFO 2660 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2545 ms
+2022-07-07 11:59:35.540  INFO 2660 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-07 11:59:35.610  INFO 2660 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+2022-07-07 11:59:35.631  INFO 2660 --- [    Test worker] cinema.Main                              : Started Main in 4.85 seconds (JVM running for 5.902)
+2022-07-07 11:59:36.070  INFO 2660 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 11:59:36.071  INFO 2660 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 11:59:36.074  INFO 2660 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 ?[1;31m
 Start test 2?[0m
+?[1;31m
+Start test 3?[0m
+?[1;31m
+Start test 4?[0m
+?[1;31m
+Start test 5?[0m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
