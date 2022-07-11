@@ -318,73 +318,6 @@ files:
         }
     }
   learner_created: true
-- name: src/cinema/model/Ticket.java
-  visible: true
-  text: |
-    package cinema.model;
-
-    import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-    import java.util.Objects;
-
-    @JsonIgnoreProperties("purchased")
-    public class Seat {
-        private int row;
-        private int column;
-        private int price;
-        private boolean purchased;
-
-        public Seat() {
-        }
-
-        public Seat(int row, int column) {
-            this.row = row;
-            this.column = column;
-            this.price = row <= 4 ? 10 : 8;
-        }
-
-        public int getRow() {
-            return row;
-        }
-
-        public void setRow(int row) {
-            this.row = row;
-        }
-
-        public int getColumn() {
-            return column;
-        }
-
-        public void setColumn(int column) {
-            this.column = column;
-        }
-
-        public int getPrice() {
-            return price;
-        }
-
-        public boolean isPurchased() {
-            return purchased;
-        }
-
-        public void setPurchased(boolean purchased) {
-            this.purchased = purchased;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Seat seat = (Seat) o;
-            return row == seat.row && column == seat.column;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(row, column);
-        }
-    }
-  learner_created: true
 - name: src/cinema/model/CinemaRoom.java
   visible: true
   text: |
@@ -444,47 +377,6 @@ files:
             return available_seats;
         }
     }
-  learner_created: true
-- name: src/cinema/dto/TicketDto.java
-  visible: true
-  text: |
-    package cinema.dto;
-
-    public class SeatDto {
-        private int row;
-        private int column;
-        private int price;
-
-        public int getRow() {
-            return row;
-        }
-
-        public void setRow(int row) {
-            this.row = row;
-        }
-
-        public int getColumn() {
-            return column;
-        }
-
-        public void setColumn(int column) {
-            this.column = column;
-        }
-
-        public int getPrice() {
-            return price;
-        }
-
-        public void setPrice(int price) {
-            this.price = price;
-        }
-    }
-  learner_created: true
-- name: src/cinema/dto/RequestTicket.java
-  visible: true
-  learner_created: true
-- name: src/cinema/dto/ResponseTicket.java
-  visible: true
   learner_created: true
 - name: src/cinema/dto/ReturnedTicket.java
   visible: true
@@ -553,6 +445,163 @@ files:
         }
     }
   learner_created: true
+- name: src/cinema/model/Seat.java
+  visible: true
+  text: |
+    package cinema.model;
+
+    import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+    import java.util.Objects;
+
+    @JsonIgnoreProperties("purchased")
+    public class Seat {
+        private int row;
+        private int column;
+        private int price;
+        private boolean purchased;
+
+        public Seat() {
+        }
+
+        public Seat(int row, int column) {
+            this.row = row;
+            this.column = column;
+            this.price = row <= 4 ? 10 : 8;
+        }
+
+        public int getRow() {
+            return row;
+        }
+
+        public void setRow(int row) {
+            this.row = row;
+        }
+
+        public int getColumn() {
+            return column;
+        }
+
+        public void setColumn(int column) {
+            this.column = column;
+        }
+
+        public int getPrice() {
+            return price;
+        }
+
+        public boolean isPurchased() {
+            return purchased;
+        }
+
+        public void setPurchased(boolean purchased) {
+            this.purchased = purchased;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Seat seat = (Seat) o;
+            return row == seat.row && column == seat.column;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(row, column);
+        }
+    }
+  learner_created: true
+- name: src/cinema/dto/SeatDto.java
+  visible: true
+  text: |
+    package cinema.dto;
+
+    public class SeatDto {
+        private int row;
+        private int column;
+        private int price;
+
+        public int getRow() {
+            return row;
+        }
+
+        public void setRow(int row) {
+            this.row = row;
+        }
+
+        public int getColumn() {
+            return column;
+        }
+
+        public void setColumn(int column) {
+            this.column = column;
+        }
+
+        public int getPrice() {
+            return price;
+        }
+
+        public void setPrice(int price) {
+            this.price = price;
+        }
+    }
+  learner_created: true
+- name: src/cinema/dto/CinemaRoomDto.java
+  visible: true
+  learner_created: true
+- name: src/cinema/converters/CinemaRoomConverter.java
+  visible: true
+  learner_created: true
+- name: src/cinema/converters/SeatConverter.java
+  visible: true
+  learner_created: true
+- name: src/cinema/dto/RequestSeat.java
+  visible: true
+  learner_created: true
+- name: src/cinema/dto/PurchasedTicket.java
+  visible: true
+  learner_created: true
+- name: src/cinema/dto/RequestTicket.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13377#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #3
+
+    The JSON object shouldn&#39;t have the key &quot;error&quot;
+
+    Full JSON:
+    {
+      &quot;error&quot;: &quot;The ticket has been already purchased!&quot;
+    }
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    .   ____          _            __ _ _
+     /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+    ( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+     \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+      &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+     =========|_|==============|___/=/_/_/_/
+     :: Spring Boot ::                (v2.5.6)
+
+    2022-07-11 20:24:06.356  INFO 2136 --- [    Test worker] cinema.Main                              : Starting Main using Java 17.0.3 on HomeDesk with PID 2136 (started by vicdim in O:\IntelliJ-IDEA\Java\jet-brains-academy-java\Cinema Room REST Service\Cinema Room REST Service\task)
+    2022-07-11 20:24:06.363  INFO 2136 --- [    Test worker] cinema.Main                              : No active profile set, falling back to default profiles: default
+    2022-07-11 20:24:08.862  INFO 2136 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+    2022-07-11 20:24:08.887  INFO 2136 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2022-07-11 20:24:08.888  INFO 2136 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+    2022-07-11 20:24:09.088  INFO 2136 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2022-07-11 20:24:09.089  INFO 2136 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2608 ms
+    2022-07-11 20:24:10.427  INFO 2136 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path &#39;/actuator&#39;
+    2022-07-11 20:24:10.510  INFO 2136 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path &#39;&#39;
+    2022-07-11 20:24:10.540  INFO 2136 --- [    Test worker] cinema.Main                              : Started Main in 4.924 seconds (JVM running for 6.378)
+    2022-07-11 20:24:11.172  INFO 2136 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;
+    2022-07-11 20:24:11.173  INFO 2136 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet &#39;dispatcherServlet&#39;
+    2022-07-11 20:24:11.175  INFO 2136 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+  time: Mon, 11 Jul 2022 17:24:12 UTC
 record: 4

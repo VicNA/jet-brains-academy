@@ -1,20 +1,17 @@
 package cinema.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.Objects;
 
-@JsonIgnoreProperties("purchased")
-public class Ticket {
+public class Seat {
     private int row;
     private int column;
     private int price;
     private boolean purchased;
 
-    public Ticket() {
+    public Seat() {
     }
 
-    public Ticket(int row, int column) {
+    public Seat(int row, int column) {
         this.row = row;
         this.column = column;
         this.price = row <= 4 ? 10 : 8;
@@ -52,8 +49,8 @@ public class Ticket {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Ticket ticket = (Ticket) o;
-        return row == ticket.row && column == ticket.column;
+        Seat seat = (Seat) o;
+        return row == seat.row && column == seat.column;
     }
 
     @Override

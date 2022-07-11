@@ -1,10 +1,10 @@
 package cinema.dto;
 
-public class ResponseTicket {
+public class PurchasedTicket {
     private String token;
-    private TicketDto ticket;
+    private SeatDto ticket;
 
-    public ResponseTicket(String token, TicketDto ticket) {
+    public PurchasedTicket(String token, SeatDto ticket) {
         this.token = token;
         this.ticket = ticket;
     }
@@ -17,11 +17,11 @@ public class ResponseTicket {
         this.token = token;
     }
 
-    public TicketDto getTicket() {
+    public SeatDto getTicket() {
         return ticket;
     }
 
-    public void setTicket(TicketDto ticket) {
+    public void setTicket(SeatDto ticket) {
         this.ticket = ticket;
     }
 }

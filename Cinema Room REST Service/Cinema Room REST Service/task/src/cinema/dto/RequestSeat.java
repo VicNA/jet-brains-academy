@@ -1,9 +1,8 @@
 package cinema.dto;
 
-public class TicketDto {
+public class RequestSeat {
     private int row;
     private int column;
-    private int price;
 
     public int getRow() {
         return row;
@@ -19,13 +18,5 @@ public class TicketDto {
 
     public void setColumn(int column) {
         this.column = column;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 }
