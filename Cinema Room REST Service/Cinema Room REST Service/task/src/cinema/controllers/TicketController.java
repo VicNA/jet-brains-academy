@@ -34,7 +34,7 @@ public class TicketController {
 
     @PostMapping("/purchase")
     public ResponseEntity<?> purchase(@RequestBody RequestSeat requestSeat) {
-        Optional<Map.Entry<String, Seat>> ticket = cinemaRoom.purchaseTicket(requestSeat);
+        Optional<Map.Entry<String, Seat>> ticket = cinemaRoom.findSeat(requestSeat.getRow(), requestSeat.getColumn());
         if (ticket.isEmpty()) {
             return new ResponseEntity<>(
                     new MessageException("The number of a row or a column is out of bounds!"),
@@ -43,14 +43,16 @@ public class TicketController {
         if (ticket.get().getValue().isPurchased()) {
             return new ResponseEntity<>(
                     new MessageException("The ticket has been already purchased!"),
-                    HttpStatus.OK);
+                    HttpStatus.BAD_REQUEST);
+        } else {
+            cinemaRoom.purchaseTicket(ticket.get().getValue());
         }
-        return new ResponseEntity<>(ticketConverter.convertToResponse(ticket.get()), HttpStatus.OK);
+        return new ResponseEntity<>(ticketConverter.convertToPurchasedTicket(ticket.get()), HttpStatus.OK);
     }
 
     @PostMapping("/return")
     public ResponseEntity<?> returnTicket(@RequestBody RequestTicket ticket) {
-        Optional<Seat> seat = cinemaRoom.getSeat(ticket.getToken());
+        Optional<Seat> seat = cinemaRoom.returnTicket(ticket.getToken());
         if (seat.isEmpty()) {
             return new ResponseEntity<>(
                     new MessageException("Wrong token!"),
@@ -58,7 +60,21 @@ public class TicketController {
         }
 
         return new ResponseEntity<>(
-                seatConverter.convertToDto(seat.get()),
+                ticketConverter.convertToReturnTicket(seat.get()),
+                HttpStatus.OK);
+    }
+
+    @PostMapping("/stats")
+    public ResponseEntity<?> getStats(@RequestParam(required = false) String password) {
+        if (!"super_secret".equals(password)) {
+            return new ResponseEntity<>(
+                    new MessageException("The password is wrong!"),
+                    HttpStatus.UNAUTHORIZED
+            );
+        }
+
+        return new ResponseEntity<>(
+                cinemaRoomConverter.convertToResponseStats(cinemaRoom),
                 HttpStatus.OK);
     }
 }

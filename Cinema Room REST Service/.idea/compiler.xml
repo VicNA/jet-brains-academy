@@ -2,6 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
+      <module name="Cinema Room REST Service.Cinema_Room_REST_Service.Cinema_Room_REST_Service-task-build-classes-java.main" target="11" />
+      <module name="Cinema Room REST Service.Cinema_Room_REST_Service.Cinema_Room_REST_Service-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="Cinema Room REST Service.Cinema_Room_REST_Service.Cinema_Room_REST_Service-task-build-generated-sources-headers-java.main" target="11" />
       <module name="Cinema_Room_REST_Service.Cinema_Room_REST_Service-task-build-classes-java.main" target="11" />
       <module name="Cinema_Room_REST_Service.Cinema_Room_REST_Service-task-build-generated-sources-annotationProcessor-java.main" target="11" />
       <module name="Cinema_Room_REST_Service.Cinema_Room_REST_Service-task-build-generated-sources-headers-java.main" target="11" />
@@ -27,6 +30,10 @@
       <module name="Cinema_Room_REST_Service.Topics-Getters_and_setters-Choose_a_pair_of_getter_and_setter.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Getters_and_setters-Getting_the_fullname.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Getters_and_setters-Theory.main" target="11" />
+      <module name="Cinema_Room_REST_Service.Topics-Inheritance-Classes_for_Hospital.main" target="11" />
+      <module name="Cinema_Room_REST_Service.Topics-Inheritance-Incorrect_class_hierarchies.main" target="11" />
+      <module name="Cinema_Room_REST_Service.Topics-Inheritance-The_lost_modifier.main" target="11" />
+      <module name="Cinema_Room_REST_Service.Topics-Inheritance-Theory.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Instance_methods-Car.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Instance_methods-Circle.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Instance_methods-The_Robot_class.main" target="11" />
@@ -48,6 +55,7 @@
       <module name="Cinema_Room_REST_Service.Topics-Multidimensional_array-Theory.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Multiple_constructors-Class_instantiation.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Multiple_constructors-Entanglement.main" target="11" />
+      <module name="Cinema_Room_REST_Service.Topics-Multiple_constructors-Phone.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Multiple_constructors-Suppose,_you_have_a_class.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Multiple_constructors-Theory.main" target="11" />
       <module name="Cinema_Room_REST_Service.Topics-Multiple_constructors-Time.main" target="11" />

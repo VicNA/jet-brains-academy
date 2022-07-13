@@ -1,27 +1,27 @@
 package cinema.model;
 
-import cinema.dto.RequestSeat;
-import cinema.dto.RequestTicket;
-import cinema.dto.SeatDto;
-
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CinemaRoom {
 
-    private int total_rows;
-    private int total_columns;
+    private int totalRows;
+    private int totalColumns;
+    private int currentIncome;
+    private int availableSeats;
+    private int purchasedTicket;
     private final ConcurrentHashMap<String, Seat> tickets = new ConcurrentHashMap<>();
 
-    public CinemaRoom(int total_rows, int total_columns) {
-        this.total_rows = total_rows;
-        this.total_columns = total_columns;
+    public CinemaRoom(int totalRows, int totalColumns) {
+        this.totalRows = totalRows;
+        this.totalColumns = totalColumns;
         initRoom();
+        availableSeats = tickets.size();
     }
 
     private void initRoom() {
-        for (int i = 0; i < total_rows; i++) {
-            for (int j = 0; j < total_columns; j++) {
+        for (int i = 0; i < totalRows; i++) {
+            for (int j = 0; j < totalColumns; j++) {
                 tickets.putIfAbsent(
                         UUID.randomUUID().toString(),
                         new Seat(i + 1, j + 1));
@@ -29,39 +29,54 @@ public class CinemaRoom {
         }
     }
 
-    public Optional<Map.Entry<String, Seat>> purchaseTicket(RequestSeat requestSeat) {
+    public Optional<Map.Entry<String, Seat>> findSeat(int row, int column) {
         return tickets.entrySet().stream()
                 .filter(entry ->
-                        entry.getValue().getRow() == requestSeat.getRow()
-                                && entry.getValue().getColumn() == requestSeat.getColumn())
-                .peek(entry -> {
-                    if (!entry.getValue().isPurchased()) entry.getValue().setPurchased(true);
-                })
+                        entry.getValue().getRow() == row && entry.getValue().getColumn() == column)
                 .findFirst();
 
     }
 
-    public Optional<Seat> getSeat(String token) {
-        return Optional.ofNullable(tickets.get(token));
+    public void purchaseTicket(Seat seat) {
+        seat.setPurchased(true);
+        availableSeats--;
+        purchasedTicket++;
+        currentIncome += seat.getPrice();
     }
 
-    public int getTotal_rows() {
-        return total_rows;
+    public Optional<Seat> returnTicket(String token) {
+        Seat seat = tickets.get(token);
+        if (seat != null) {
+            seat.setPurchased(false);
+            availableSeats++;
+            purchasedTicket--;
+            currentIncome -= seat.getPrice();
+        }
+
+        return Optional.ofNullable(seat);
     }
 
-    public void setTotal_rows(int total_rows) {
-        this.total_rows = total_rows;
+    public int getTotalRows() {
+        return totalRows;
     }
 
-    public int getTotal_columns() {
-        return total_columns;
+    public int getTotalColumns() {
+        return totalColumns;
     }
 
-    public void setTotal_columns(int total_columns) {
-        this.total_columns = total_columns;
+    public Map<String, Seat> getTickets() {
+        return Collections.unmodifiableMap(tickets);
     }
 
-    public ConcurrentHashMap<String, Seat> getTickets() {
-        return tickets;
+    public int getCurrentIncome() {
+        return currentIncome;
+    }
+
+    public int getAvailableSeats() {
+        return availableSeats;
+    }
+
+    public int getPurchasedTicket() {
+        return purchasedTicket;
     }
 }
