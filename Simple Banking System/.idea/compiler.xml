@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="17">
+      <module name="Simple_Banking_System.Simple_Banking_System-task.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_compile-time_errors.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_the_program.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-What's_wrong.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Exception_handling-Converting_and_multiplying.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Exception_handling-Determine_a_block_for_handling_exceptions.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Exception_handling-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Hierarchy_of_exceptions-Base_class.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Hierarchy_of_exceptions-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-java.util.Arrays-Array_sorting.main" target="11" />
+      <module name="Simple_Banking_System.Topics-java.util.Arrays-Copy_the_array_range.main" target="11" />
+      <module name="Simple_Banking_System.Topics-java.util.Arrays-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Objects-Change_identities.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Objects-Null_or_not.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Objects-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Random-Choose_a_correct_invocation.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Random-Find_the_seed.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Random-Gaussian_random_numbers.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Random-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-The_keyword_super-Bank_account.main" target="11" />
+      <module name="Simple_Banking_System.Topics-The_keyword_super-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-What_is_an_exception-Avoid_division_by_zero.main" target="11" />
+      <module name="Simple_Banking_System.Topics-What_is_an_exception-Theory.main" target="11" />
+      <module name="Simple_Banking_System.util.main" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
