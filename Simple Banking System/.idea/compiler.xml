@@ -2,7 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
+      <module name="Simple_Banking_System.Simple_Banking_System-task-build-classes-java.main" target="11" />
+      <module name="Simple_Banking_System.Simple_Banking_System-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="Simple_Banking_System.Simple_Banking_System-task-build-generated-sources-headers-java.main" target="11" />
+      <module name="Simple_Banking_System.Simple_Banking_System-task-build-reports-tests.main" target="11" />
+      <module name="Simple_Banking_System.Simple_Banking_System-task-build-test-results.main" target="11" />
+      <module name="Simple_Banking_System.Simple_Banking_System-task-build-tmp.main" target="11" />
       <module name="Simple_Banking_System.Simple_Banking_System-task.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Command-line_arguments-Basic_calculator.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Command-line_arguments-Command_line_arguments.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Command-line_arguments-Get_the_game_mode.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Command-line_arguments-Theory.main" target="11" />
       <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_compile-time_errors.main" target="11" />
       <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_the_program.main" target="11" />
       <module name="Simple_Banking_System.Topics-Errors_in_programs-Theory.main" target="11" />
@@ -10,6 +20,8 @@
       <module name="Simple_Banking_System.Topics-Exception_handling-Converting_and_multiplying.main" target="11" />
       <module name="Simple_Banking_System.Topics-Exception_handling-Determine_a_block_for_handling_exceptions.main" target="11" />
       <module name="Simple_Banking_System.Topics-Exception_handling-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Files-Are_siblings.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Files-Theory.main" target="11" />
       <module name="Simple_Banking_System.Topics-Hierarchy_of_exceptions-Base_class.main" target="11" />
       <module name="Simple_Banking_System.Topics-Hierarchy_of_exceptions-Theory.main" target="11" />
       <module name="Simple_Banking_System.Topics-java.util.Arrays-Array_sorting.main" target="11" />
@@ -24,6 +36,11 @@
       <module name="Simple_Banking_System.Topics-Random-Theory.main" target="11" />
       <module name="Simple_Banking_System.Topics-The_keyword_super-Bank_account.main" target="11" />
       <module name="Simple_Banking_System.Topics-The_keyword_super-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Types_and_variables-Assignments.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Types_and_variables-Statements.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Types_and_variables-Statements__1_.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Types_and_variables-The_name_of_a_variable.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Types_and_variables-Theory.main" target="11" />
       <module name="Simple_Banking_System.Topics-What_is_an_exception-Avoid_division_by_zero.main" target="11" />
       <module name="Simple_Banking_System.Topics-What_is_an_exception-Theory.main" target="11" />
       <module name="Simple_Banking_System.util.main" target="11" />

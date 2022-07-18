@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+- text: random.nextInt(upper - lower) + lower + 1
+- text: random.nextInt(upper - lower + 1) + lower
+- text: random.nextInt(upper - lower) + lower
+- text: random.nextInt(lower) + upper
+- text: random.nextInt(lower, upper + 1)
 files:
 - name: src/Task.java
   visible: true
