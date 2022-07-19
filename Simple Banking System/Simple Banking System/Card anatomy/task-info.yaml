@@ -240,8 +240,5 @@ files:
 
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/8425#comment
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Sat, 16 Jul 2022 19:00:16 UTC
-record: 1
+status: Unchecked
+record: -1

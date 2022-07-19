@@ -13,6 +13,12 @@
       <module name="Simple_Banking_System.Topics-Command-line_arguments-Command_line_arguments.main" target="11" />
       <module name="Simple_Banking_System.Topics-Command-line_arguments-Get_the_game_mode.main" target="11" />
       <module name="Simple_Banking_System.Topics-Command-line_arguments-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Automatically_generated_constructor.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Constructor_definition.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Cookie.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Creating_news.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-User.main" target="11" />
       <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_compile-time_errors.main" target="11" />
       <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_the_program.main" target="11" />
       <module name="Simple_Banking_System.Topics-Errors_in_programs-Theory.main" target="11" />
