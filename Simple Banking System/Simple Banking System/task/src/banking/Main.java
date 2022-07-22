@@ -1,5 +1,6 @@
 package banking;
 
+import java.sql.SQLException;
 import java.util.*;
 
 public class Main {
@@ -8,26 +9,46 @@ public class Main {
     private static final Map<String, String> MAP = new HashMap<>();
     private static final Scanner SC = new Scanner(System.in);
     private static boolean exit = false;
+    private static final DatabaseUtil util = new DatabaseUtil();
 
     public static void main(String[] args) {
-        String input;
-        do {
-            printMainMenu();
-            input = SC.nextLine();
-            switch (input) {
-                case "0":
-                    System.out.println("Bye!");
-                    break;
-                case "1":
-                    createAccount();
-                    break;
-                case "2":
-                    if (logIntoAccount()) {
-                        actionSubMenu();
-                    }
-                    break;
-            }
-        } while (!"0".equals(input) || exit);
+        if (args.length < 2) return;
+        if (!"-fileName".equals(args[0])) return;
+
+        try {
+            util.openDb(args[1]);
+
+            String input;
+            do {
+                printMainMenu();
+                input = SC.nextLine();
+                switch (input) {
+                    case "0":
+                        System.out.println("Bye!");
+                        break;
+                    case "1":
+                        createAccount();
+                        break;
+                    case "2":
+                        Card card = logIntoAccount();
+                        if (card != null) {
+                            System.out.println("\nYou have successfully logged in!");
+                            actionSubMenu();
+                        } else {
+                            System.out.println("\nWrong card number or PIN!");
+                        }
+                        break;
+                }
+                System.out.println(input);
+                System.out.println(exit);
+            } while (!"0".equals(input) && !exit);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            SC.close();
+            util.close();
+        }
     }
 
     public static void printMainMenu() {
@@ -45,27 +66,27 @@ public class Main {
     public static void createAccount() {
         System.out.println("\nYour card has been created");
         System.out.println("Your card number:");
-        String card = applyLuhnAlgorithm(BIN + generateNumber(9));
-        System.out.println(card);
+        String number = applyLuhnAlgorithm(BIN + generateNumber(9));
+        System.out.println(number);
 
         String pin = generateNumber(4);
         System.out.println("Your card PIN:");
         System.out.println(pin);
 
-        MAP.put(card, pin);
+        util.insert(number, pin);
     }
 
     public static String applyLuhnAlgorithm(String number) {
         char[] chars = Arrays.copyOf(number.toCharArray(), number.length() + 1);
-        int num;
+        int tmp;
         int sum = 0;
         for (int i = 0; i < chars.length - 1; i++) {
-            num = chars[i] - '0';
-            num = i % 2 == 0 ? num * 2 : num;
-            sum += num > 9 ? num - 9 : num;
+            tmp = chars[i] - '0';
+            tmp = i % 2 == 0 ? tmp * 2 : tmp;
+            sum += tmp > 9 ? tmp - 9 : tmp;
         }
-        num = sum % 10 != 0 ? 10 - (sum % 10) : 0;
-        chars[chars.length - 1] = Character.forDigit(num, 10);
+        tmp = sum % 10 != 0 ? 10 - (sum % 10) : 0;
+        chars[chars.length - 1] = Character.forDigit(tmp, 10);
 
         return String.valueOf(chars);
     }
@@ -80,19 +101,13 @@ public class Main {
         return sb.toString();
     }
 
-    public static boolean logIntoAccount() {
+    public static Card logIntoAccount() {
         System.out.println("\nEnter your card number:");
-        String card = SC.nextLine();
+        String number = SC.nextLine();
         System.out.println("Enter your PIN:");
         String pin = SC.nextLine();
 
-        if (pin.equals(MAP.get(card))) {
-            System.out.println("\nYou have successfully logged in!");
-            return true;
-        } else {
-            System.out.println("\nWrong card number or PIN!");
-            return false;
-        }
+        return util.select(number, pin);
     }
 
     public static void actionSubMenu() {
