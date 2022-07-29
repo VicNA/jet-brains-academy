@@ -1,10 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: 100
-- text: 99
-- text: 101
-- text: 0
 files:
 - name: src/Task.java
   visible: true
@@ -20,3 +15,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/1997#comment
 status: Solved
 record: -1
+local_check: false

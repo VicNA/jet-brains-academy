@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: printSum(123L, 88L);
-- text: printSum(123, 88L);
-- text: printSum(123, 13);
-- text: printSum(123L, 13);
+is_multiple_choice: false
 files:
 - name: src/Task.java
   visible: true
@@ -20,3 +15,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/10974#comment
 status: Solved
 record: -1
+local_check: false

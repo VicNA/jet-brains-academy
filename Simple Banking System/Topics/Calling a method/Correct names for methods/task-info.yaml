@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: cookPASTA
-- text: 576MyBestMethod
-- text: kitty
-- text: findUser
-- text: readLine
+is_multiple_choice: false
 files:
 - name: src/Task.java
   visible: true
@@ -21,3 +15,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/10975#comment
 status: Solved
 record: -1
+local_check: false
